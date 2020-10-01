@@ -4,32 +4,23 @@
   "description": "web automation testing with testcafe",
   "main": "index.js",
   "scripts": {
+    "test-cucumber": "node_modules/.bin/gherkin-testcafe chrome page-objects/step_definitions/*.js page-objects/features/*.feature",
     "test:chrome": "testcafe chrome ./test -s takeOnFails=true --disable-page-caching --skip-js-errors",
-    "test:chrome:headless": "testcafe chrome:headless ./test",
-    "test:chrome:mobile": "testcafe chrome:emulation:device=iphone 11 ./test",
-    "test:safari": "testcafe safari ./test --reporter json",
-    "test:firefox": "testcafe firefox ./test --reporter minimal",
-    "jenkins": "java -jar jenkins.war -httpPort=8080 --enable-future-java"
+    "test:chrome:headless": "testcafe chrome:headless ./test"
   },
   "keywords": [
     "testcafe",
     "DANA",
     "web",
-    "automation",
-    "web",
     "automation"
   ],
-  "author": "Magdalena Vaenlie Monita",
+  "author": "DANA QA",
   "license": "ISC",
   "dependencies": {
-    "prettier": "^2.0.5",
-    "testcafe": "^1.8.4",
-    "testcafe-reporter-json": "^2.2.0",
-    "testcafe-reporter-list": "^2.1.0",
-    "testcafe-reporter-minimal": "^2.1.0",
-    "testcafe-reporter-nunit": "^0.1.2",
-    "testcafe-reporter-xunit": "^2.1.0",
-    "xpath-to-css": "^1.0.4"
-  },
-  "devDependencies": {}
+    "cucumber": "^5.1.0",
+    "eslint": "^4.19.1",
+    "gherkin-testcafe": "^2.5.2",
+    "npm": "^6.0.0",
+    "testcafe": "^1.8.4"
+  }
 }
