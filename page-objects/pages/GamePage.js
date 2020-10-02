@@ -11,14 +11,6 @@ class GamePage{
     async accessGamePage() {
         await t.click(this.title_game)
     }
-    async searchValidGame(validGameName){
-        await t
-        .typeText(this.search_box,validGameName,{ paste: true, replace: true })
-    }
-    async searchInvalidGame(invalidGameName){
-        await t
-        .typeText(this.search_box,invalidGameName,{ paste: true, replace: true })
-    }
 }
 
 export default GamePage

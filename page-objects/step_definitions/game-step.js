@@ -1,6 +1,5 @@
 const {Given, When, Then} = require('cucumber')
 import GamePage from '../pages/GamePage'
-import GameData from '../components/MainData'
 import MainData from '../components/MainData'
 
 const gamePage = new GamePage()
@@ -20,5 +19,5 @@ Then(/^User see searched game name "([^"]*)" on the list$/, async (t, [validGame
 })
 
 Then(/^User didn't see searched game on the list$/, async (t) => {
-    await t.expect(gamePage.game_placeholder.visible).notOk()
+    await t.expect(gamePage.game_placeholder.exists).notOk()
 })
