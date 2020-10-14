@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test-cucumber": "node_modules/.bin/gherkin-testcafe chrome page-objects/step_definitions/*.js page-objects/features/*.feature",
-    "test:chrome": "testcafe chrome ./test -s takeOnFails=true --disable-page-caching --skip-js-errors"
+    "test:chrome": "testcafe chrome ./test -s takeOnFails=true --disable-page-caching --skip-js-errors",
+    "test-headless": "node_modules/.bin/gherkin-testcafe chrome:headless page-objects/step_definitions/*.js page-objects/features/*.feature"
   },
   "keywords": [
     "testcafe",
